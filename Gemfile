@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.0.0'
+ruby '2.1.1'
 gem 'rails', '4.1.0'
 gem 'sass-rails', '~> 4.0.3'
 gem 'uglifier', '>= 1.3.0'
@@ -15,6 +15,23 @@ gem 'mysql2'
 gem 'pundit'
 gem 'simple_form'
 gem 'thin'
+
+gem 'jquery-turbolinks'
+gem 'rollout'
+gem "paranoia", "~> 2.0"
+gem "font-awesome-rails"
+gem 'activerecord-session_store', github: 'rails/activerecord-session_store'
+
+gem 'bourbon'
+gem 'neat'
+gem 'bitters'
+
+gem 'omniauth'
+gem 'omniauth-linkedin'
+gem 'omniauth-twitter'
+
+gem 'honeybadger'
+
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller', :platforms=>[:mri_20]
@@ -29,17 +46,23 @@ group :development do
   gem 'rb-fchange', :require=>false
   gem 'rb-fsevent', :require=>false
   gem 'rb-inotify', :require=>false
+
+  gem 'terminal-notifier-guard'
 end
+
 group :development, :test do
   gem 'factory_girl_rails'
   gem 'pry-rails'
   gem 'pry-rescue'
   gem 'rspec-rails'
+  gem 'spring-commands-rspec'
 end
+
 group :test do
   gem 'capybara'
   gem 'database_cleaner'
   gem 'faker'
   gem 'launchy'
   gem 'selenium-webdriver'
+  gem 'shoulda-matchers', require: false
 end
